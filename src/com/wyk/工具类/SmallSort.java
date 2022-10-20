@@ -1,5 +1,6 @@
 package com.wyk.工具类;
 
+import com.wyk.插入排序法.InsertSort;
 import com.wyk.选择排序法.SelectionSort;
 
 import java.lang.ref.SoftReference;
@@ -23,6 +24,10 @@ public class SmallSort {
         long start = System.nanoTime();
         if ("SelectionSort".equals(nameSort)){
             SelectionSort.sort1(arr);
+        }else if ("InsertSort".equals(nameSort)){
+            InsertSort.insertSort1(arr);
+        }else if ("InsertSort2".equals(nameSort)){
+            InsertSort.insertSort2(arr);
         }
         long end = System.nanoTime();
         double times = (end - start) / 1000000000.0;
